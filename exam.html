@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		#body{
+			border: 2px solid black;
+			background-color: #ebedec;
+			width: 400px;
+			height: auto;
+		}
+		.a{
+			background-color: #2ee8a1;
+			padding: 5px;
+		}
+		.b{
+			margin-left: 10px;
+			padding: 15px;
+		}
+		.c{
+			text-align: right;
+			padding: 5px;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="body">
+		<div class="a">
+			<h1>
+				Login
+			</h1>
+			<h5>
+				See whats going on in your collage today
+			</h5>
+		</div>
+
+		<div class="b">
+			<form name="form">
+				<label>Login As</label><br>
+				<select name="users" style="width:350px;">
+					<option value="0">Student</option>
+					<option value="1">Staff</option>
+				</select><br><br>
+				<label>USN</label><br>
+				<input type="USN" name="usn" placeholder="USN" style="width:345px;"><br><br>
+				<label>Pasword</label><br>
+				<input type="Pasword" name="password" placeholder="Password" style="width:345px;"> <br><br>
+				<input type="button" name="btn" value="Login" onClick="validation()" style="background-color:#32c949; color: white; width: 355px;">
+			</form>		
+		</div>
+		<div class="c">
+			<p>Forget <a href="forgetpassword.html">Password?</a></p>
+		</div>
+		
+	</div>
+
+	<script type="text/javascript">
+		function validation()
+		{
+			var usn = document.form.usn.value;
+			var password = document.form.password.value;
+
+			if (usn=="" && password=="")
+			{
+				alert("Error: fields are empty")
+			}
+			if (document.form.password.value.length != 6)
+			{
+				alert("Error: Password should have minimum 6 characters")
+			}
+			
+		}
+	</script>
+
+</body>
+</html>
